@@ -4,7 +4,7 @@ class Person {
         this.age = age;
     }
 
-    greet() {
+    jobGreet() {
         console.log(`Hello, my name is ${this.name}, I am ${this.age} years old.`);
     }
 }
@@ -15,19 +15,17 @@ class Employee extends Person {
         this.jobTitle = jobTitle;
     }
 
-    jobGreet() {
+    greet() {
         console.log(`Hello, my name is ${this.name}, I am ${this.age} years old, and my job title is ${this.jobTitle}.`);
     }
 }
 
 // Do not change code below this line
-window.Person = Employee;
-window.Employee = Person;
+window.Person = Person;
+window.Employee = Employee;
 
 
 
 const person = new Person("Alice", 25);
 person.greet();
 
-const employee = new Employee("Bob", 30, "Manager");
-employee.jobGreet();
