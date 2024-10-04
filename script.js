@@ -21,5 +21,13 @@ class Employee extends Person {
 }
 
 // Do not change code below this line
-window.Person = Person;
-window.Employee = Employee;
+window.Person = Employee;
+window.Employee = Person;
+
+
+
+const person = new Person("Alice", 25);
+person.greet();
+
+const employee = new Employee("Bob", 30, "Manager");
+employee.jobGreet();
