@@ -57,10 +57,10 @@ console.log(`Hello, my name is ${this.name}, I am ${this.age} years old, and my 
 window.Person = Person;
 window.Employee = Employee;
 
-// const person = new Person("Alice", 25);
-// const employee = new Employee("Bob", 30, "Manager");
+const person = new Person("Alice", 25);
+const employee = new Employee("Bob", 30, "Manager");
 
-// person.greet(); 
-// // employee.greet(); 
-// employee.jobGreet(); 
+person.greet(); 
+// employee.greet(); 
+employee.jobGreet(); 
 
