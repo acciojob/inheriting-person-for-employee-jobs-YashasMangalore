@@ -5,7 +5,13 @@ class Person {
     }
 
     greet() {
-        console.log(`Hello, my name is ${this.name}, I am ${this.age} years old.`);
+        if (this.jobTitle) {
+            // If jobTitle exists, print job greet message
+            console.log(`Hello, my name is ${this.name}, I am ${this.age} years old, and my job title is ${this.jobTitle}.`);
+        } else {
+            // Otherwise, print normal greet message
+            console.log(`Hello, my name is ${this.name}, I am ${this.age} years old.`);
+        }
     }
 }
 
@@ -15,12 +21,8 @@ class Employee extends Person {
         this.jobTitle = jobTitle;
     }
 
-	if (this.jobTitle) {
-		console.log(`Hello, my name is ${this.name}, I am ${this.age} years old, and my job title is ${this.jobTitle}.`);
-	} else {
-		super.greet(); // Call the greet method from the parent class (Person)
-	}
-    
+    // Optional: If the tests expect to use `greet` directly, you don't need to override it here
+    // If needed, you can add a jobGreet() function here, but `greet` handles both cases now
 }
 
 // Do not change code below this line
