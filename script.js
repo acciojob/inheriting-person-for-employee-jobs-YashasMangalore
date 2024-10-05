@@ -5,13 +5,7 @@ class Person {
     }
 
     greet() {
-        if (this.jobTitle) {
-            // If jobTitle exists, print job greet message
-            console.log(`Hello, my name is ${this.name}, I am ${this.age} years old, and my job title is ${this.jobTitle}.`);
-        } else {
-            // Otherwise, print normal greet message
-            console.log(`Hello, my name is ${this.name}, I am ${this.age} years old.`);
-        }
+        console.log(`Hello, my name is ${this.name}, I am ${this.age} years old.`);
     }
 }
 
@@ -21,13 +15,19 @@ class Employee extends Person {
         this.jobTitle = jobTitle;
     }
 
-    // Optional: If the tests expect to use `greet` directly, you don't need to override it here
-    // If needed, you can add a jobGreet() function here, but `greet` handles both cases now
+    jobGreet() {
+        if (this.jobTitle) {
+            console.log(`Hello, my name is ${this.name}, I am ${this.age} years old, and my job title is ${this.jobTitle}.`);
+        } else {
+            this.greet(); // Call the greet method from the parent class if no job title is provided
+        }
+    }
 }
 
 // Do not change code below this line
 window.Person = Person;
 window.Employee = Employee;
+
 
 
 // // Test case 1: Person instance
