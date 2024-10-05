@@ -26,10 +26,10 @@ class Employee extends Person {
 window.Person = Person;
 window.Employee = Employee;
 
-// Test case 1: Person instance
-const person = new Person("Alice", 25);
-person.greet();
+// // Test case 1: Person instance
+// const person = new Person("Alice", 25);
+// person.greet();
 
-// Test case 2: Employee instance
-const employee = new Employee("Bob", 30, "Manager");
-employee.jobGreet();
+// // Test case 2: Employee instance
+// const employee = new Employee("Bob", 30, "Manager");
+// employee.jobGreet();
