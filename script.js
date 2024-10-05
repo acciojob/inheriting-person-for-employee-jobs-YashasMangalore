@@ -15,16 +15,19 @@ class Employee extends Person {
         this.jobTitle = jobTitle;
     }
 
-    jobGreet() {
-		 console.log(`Hello, my name is Alice and I am 25 years old.`);
-		
-        //console.log(`Hello, my name is ${this.name}, I am ${this.age} years old, and my job title is ${this.jobTitle}.`);
+    greetOrJobGreet() {
+        if (this.jobTitle) {
+            console.log(`Hello, my name is ${this.name}, I am ${this.age} years old, and my job title is ${this.jobTitle}.`);
+        } else {
+            super.greet(); // Call the greet method from the parent class (Person)
+        }
     }
 }
 
 // Do not change code below this line
 window.Person = Person;
 window.Employee = Employee;
+
 
 // // Test case 1: Person instance
 // const person = new Person("Alice", 25);
