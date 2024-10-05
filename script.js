@@ -16,7 +16,7 @@ class Employee extends Person {
     }
 
     jobGreet() {
-        if (this.name !== "Bob") {
+        if (this.jobTitle) {
             console.log(`Hello, my name is Bob, I am 30 years old, and my job title is Manager.`);
         } else {
             this.greet(); // Call the greet method from the parent class if no job title is provided
